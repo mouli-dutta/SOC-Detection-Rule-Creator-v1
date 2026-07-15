@@ -1,0 +1,141 @@
+prompt,intent
+Detect brute force attacks against Active Directory,brute_force
+Detect brute force login attempts,brute_force
+Detect failed logins,brute_force
+Detect multiple failed authentication attempts from same source,brute_force
+Detect password spraying against Office 365,brute_force
+Detect repeated login failures within a short time window,brute_force
+Detect SSH brute force attempts,brute_force
+Detect RDP brute force attempts,brute_force
+Alert on excessive failed logon events,brute_force
+Detect credential stuffing attempts,brute_force
+Detect suspicious authentication,credential_access
+Detect impossible travel,credential_access
+Detect credential dumping from LSASS,credential_access
+Detect Mimikatz usage,credential_access
+Detect kerberoasting attempts,credential_access
+Detect pass the hash attacks,credential_access
+Detect suspicious use of cached credentials,credential_access
+Detect access to the SAM database,credential_access
+Detect NTDS.dit file access,credential_access
+Detect suspicious credential access from a new device,credential_access
+Detect malware execution,malware
+Detect known malware hash execution,malware
+Detect suspicious file dropped in temp directory,malware
+Detect malicious DLL sideloading,malware
+Detect execution of a signed binary proxy,malware
+Detect trojan activity on endpoint,malware
+Detect known malicious IP communication,malware
+Detect suspicious process injection,malware
+Detect rootkit installation,malware
+Detect malware beaconing to command and control,malware
+Detect PowerShell downloads,powershell
+Detect encoded PowerShell,powershell
+Detect suspicious PowerShell execution,powershell
+Detect PowerShell downgrade attack,powershell
+Detect PowerShell obfuscation techniques,powershell
+Detect PowerShell invoking Mimikatz,powershell
+Detect PowerShell executing base64 encoded commands,powershell
+Detect PowerShell disabling AMSI,powershell
+Detect PowerShell remoting to remote host,powershell
+Detect suspicious PowerShell script block logging events,powershell
+Detect lateral movement,lateral_movement
+Detect lateral movement using WMI,lateral_movement
+Detect lateral movement via PsExec,lateral_movement
+Detect lateral movement using remote desktop,lateral_movement
+Detect suspicious SMB activity across hosts,lateral_movement
+Detect pass the ticket attacks,lateral_movement
+Detect lateral movement using WinRM,lateral_movement
+Detect internal network scanning followed by remote login,lateral_movement
+Detect suspicious remote service creation,lateral_movement
+Detect movement between workstations using admin shares,lateral_movement
+Detect persistence mechanisms,persistence
+Detect new scheduled task creation,persistence
+Detect suspicious registry run key modification,persistence
+Detect new service installation for persistence,persistence
+Detect startup folder modification,persistence
+Detect WMI event subscription persistence,persistence
+Detect suspicious autorun entries,persistence
+Detect creation of a new local administrator account,persistence
+Detect DLL hijacking for persistence,persistence
+Detect golden ticket persistence technique,persistence
+Detect ransomware,ransomware
+Detect ransomware file encryption activity,ransomware
+Detect mass file renaming with suspicious extensions,ransomware
+Detect shadow copy deletion,ransomware
+Detect ransomware note creation,ransomware
+Detect rapid file modification across shares,ransomware
+Detect known ransomware family behavior,ransomware
+Detect encryption of backup files,ransomware
+Detect vssadmin delete shadows execution,ransomware
+Detect ransomware lateral spread via SMB,ransomware
+Detect phishing emails,phishing
+Detect phishing links clicked by users,phishing
+Detect suspicious email attachment execution,phishing
+Detect suspicious Office macros,phishing
+Detect malicious macro execution from email attachment,phishing
+Detect spoofed sender domains,phishing
+Detect credential harvesting page access,phishing
+Detect business email compromise attempt,phishing
+Detect suspicious email with executable attachment,phishing
+Detect phishing campaign targeting employees,phishing
+Detect privilege escalation,privilege_escalation
+Detect suspicious use of runas,privilege_escalation
+Detect UAC bypass attempts,privilege_escalation
+Detect token impersonation,privilege_escalation
+Detect exploitation of a local privilege escalation vulnerability,privilege_escalation
+Detect addition of user to privileged group,privilege_escalation
+Detect suspicious sudo usage,privilege_escalation
+Detect cloud admin abuse,privilege_escalation
+Detect AWS IAM abuse,privilege_escalation
+Detect Azure privilege escalation via role assignment,privilege_escalation
+Detect data exfiltration,data_exfiltration
+Detect large data transfer to external destination,data_exfiltration
+Detect data exfiltration over DNS,data_exfiltration
+Detect suspicious upload to cloud storage,data_exfiltration
+Detect data staged for exfiltration,data_exfiltration
+Detect exfiltration over encrypted channel,data_exfiltration
+Detect USB mass storage data transfer,data_exfiltration
+Detect exfiltration via email attachment,data_exfiltration
+Detect suspicious FTP upload of sensitive files,data_exfiltration
+Detect abnormal outbound data volume,data_exfiltration
+Detect web attacks,web_attacks
+Detect SQL injection attempts,web_attacks
+Detect cross site scripting attempts,web_attacks
+Detect web shell upload,web_attacks
+Detect directory traversal attempts,web_attacks
+Detect suspicious web application login bypass,web_attacks
+Detect remote code execution attempt against web server,web_attacks
+Detect suspicious user agent scanning web application,web_attacks
+Detect brute force against web login form,web_attacks
+Detect suspicious file upload to web server,web_attacks
+Detect cloud attacks,cloud_attacks
+Detect Azure login anomalies,cloud_attacks
+Detect suspicious AWS console login,cloud_attacks
+Detect Kubernetes attacks,cloud_attacks
+Detect suspicious Kubernetes pod creation,cloud_attacks
+Detect Google Workspace admin abuse,cloud_attacks
+Detect Okta suspicious sign in,cloud_attacks
+Detect Microsoft 365 mailbox rule abuse,cloud_attacks
+Detect S3 bucket public exposure,cloud_attacks
+Detect unauthorized cloud resource creation,cloud_attacks
+Detect living off the land techniques,living_off_the_land
+Detect suspicious use of certutil,living_off_the_land
+Detect suspicious use of bitsadmin,living_off_the_land
+Detect suspicious use of regsvr32,living_off_the_land
+Detect suspicious use of mshta,living_off_the_land
+Detect suspicious use of wmic,living_off_the_land
+Detect abuse of native Windows binaries,living_off_the_land
+Detect suspicious rundll32 execution,living_off_the_land
+Detect abuse of trusted system utilities,living_off_the_land
+Detect LOLBin execution chains,living_off_the_land
+Detect reconnaissance activity,reconnaissance
+Detect port scanning,reconnaissance
+Detect unusual DNS queries,reconnaissance
+Detect network enumeration,reconnaissance
+Detect Active Directory enumeration,reconnaissance
+Detect suspicious use of nmap,reconnaissance
+Detect user and group enumeration commands,reconnaissance
+Detect scanning of internal subnets,reconnaissance
+Detect suspicious LDAP queries,reconnaissance
+Detect discovery commands like whoami and net user,reconnaissance
