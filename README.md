@@ -71,3 +71,28 @@ directly in a browser (no build step — it's a static file that calls
 - Single-page dark "SOC dashboard" UI: prompt box, accordion rule cards
   with copy/download, AI analysis cards, dataset explorer, training
   metrics view, and generation history
+
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="imaages/main_page.png" width="300"><br>
+      <b>Landing Page and Search</b>
+    </td>
+    <td align="center">
+      <img src="imaages/page2.png" width="300"><br>
+      <b>Info Page</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="imaages/rules.png" width="300"><br>
+      <b>Supported Rules</b>
+    </td>
+    <td align="center">
+      <img src="imaages/sigma.png" width="300"><br>
+      <b>Sample Rule Logic</b>
+    </td>
+  </tr>
+</table>
