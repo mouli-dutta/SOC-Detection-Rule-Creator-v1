@@ -57,7 +57,7 @@ directly in a browser (no build step — it's a static file that calls
 ## What's implemented (MVP scope)
 
 - Local TF-IDF + Linear SVM classifier across 14 attack-intent categories
-  (`backend/data/training_data.csv`, ~140 labeled example prompts)
+  (~140 labeled example prompts)
 - Rule generation for all 5 requested platforms: Sigma, YARA-L, Splunk SPL,
   Sentinel KQL, Elastic
 - Heuristic parameter extraction from the prompt (thresholds, time windows)
@@ -65,45 +65,9 @@ directly in a browser (no build step — it's a static file that calls
 - Full AI Analysis payload: detection logic, MITRE mapping, severity,
   confidence, false positives, coverage gaps, improvements, required log
   source/fields, and an explainable quality score with a breakdown
-- FastAPI backend with SQLite-backed history (`/api/generate`,
-  `/api/history`, `/api/dataset`, `/api/mitre`, `/api/train`)
+- FastAPI backend with SQLite-backed history 
 - Retrain endpoint that reports train/validation accuracy, precision,
   recall, F1, and a confusion matrix
 - Single-page dark "SOC dashboard" UI: prompt box, accordion rule cards
   with copy/download, AI analysis cards, dataset explorer, training
   metrics view, and generation history
-
-## What's *not* built yet (deferred from the full spec)
-
-The original spec is a large production system (Next.js/TypeScript
-frontend, Monaco Editor, Docker, full test suite, PDF/YAML export,
-duplicate detection, MITRE attack-chain graph, TensorFlow/USE option,
-etc.). This MVP proves out the core pipeline end-to-end; natural next
-increments, roughly in order of value:
-
-1. Expand `training_data.csv` (more examples per class — validation
-   accuracy is currently ~60% on a 20% held-out split, which is expected
-   with ~10 examples/class; more data is the single highest-leverage
-   improvement)
-2. Export to JSON/YAML/TXT/PDF, rule favoriting/versioning (schema already
-   has a `favorite` column)
-3. Move the frontend to Next.js + TypeScript + Monaco if richer editing
-   (syntax highlighting, inline edits) is needed
-4. Dockerfile + docker-compose for one-command startup
-5. Unit/integration tests (pytest) for classifier + rule templates
-6. Swap in TensorFlow/USE as an alternate classifier behind the same
-   `predict(prompt) -> (intent, confidence)` interface
-
-Happy to build out any of these next — just say which.
-
-## API reference
-
-| Method | Path | Purpose |
-|---|---|---|
-| POST | `/api/generate` | Classify a prompt, render all 5 rules + analysis, save to history |
-| GET | `/api/history` | List past generations |
-| POST | `/api/history/{id}/favorite` | Toggle favorite |
-| GET | `/api/dataset` | Training data + class counts |
-| GET | `/api/mitre` | Intent → MITRE ATT&CK mapping table |
-| POST | `/api/train` | Retrain classifier, return metrics |
-| GET | `/api/train/last` | Last saved training metrics |
